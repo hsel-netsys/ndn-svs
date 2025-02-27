@@ -32,6 +32,9 @@ public:
 
   virtual void
   insert(const Data& data) = 0;
+
+  virtual void
+  erase(const Name& name, bool isPrefix = true) = 0;
 };
 
 } // namespace ndn::svs

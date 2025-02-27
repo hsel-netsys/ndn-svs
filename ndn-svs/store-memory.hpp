@@ -18,6 +18,7 @@
 #define NDN_SVS_STORE_MEMORY_HPP
 
 #include "store.hpp"
+#include "iostream"
 
 #include <ndn-cxx/ims/in-memory-storage-persistent.hpp>
 
@@ -36,6 +37,12 @@ public:
   insert(const Data& data) override
   {
     return m_ims.insert(data);
+  }
+
+  void
+  erase(const Name& name, bool isPrefix = true) override
+  {
+    return m_ims.erase(name, isPrefix);
   }
 
 private:
