@@ -45,6 +45,12 @@ public:
     return m_ims.erase(name, isPrefix);
   }
 
+  size_t
+  size() override
+  {
+    return m_ims.size();
+  }
+
 private:
   InMemoryStoragePersistent m_ims;
 };

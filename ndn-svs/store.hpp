@@ -35,6 +35,9 @@ public:
 
   virtual void
   erase(const Name& name, bool isPrefix = true) = 0;
+
+  virtual size_t
+  size() = 0;
 };
 
 } // namespace ndn::svs
